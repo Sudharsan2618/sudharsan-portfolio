@@ -1,16 +1,19 @@
+
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sudharsan Portfolio</title>
+    <title>Sudharsan D S - AI Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Sudharsan D S🤓</div>
+        <div class="logo">Sudharsan D S 🤖</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -18,6 +21,7 @@
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -36,182 +40,169 @@
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
     </nav>
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./profile-pic.png" alt="Sudharsan profile picture" />
+            <img src="./assets/profile-pic.png" alt="Sudharsan profile picture" />
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Sudharsan D S🧑‍💻</h1>
-            <p class="section__text__p2">Software Developer || Freelancer</p>
+            <h1 class="title">Sudharsan D S 🧠</h1>
+            <p class="section__text__p2">AI Engineer || Machine Learning Specialist</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="location.href='https://drive.google.com/file/d/165gMOpOeOjJMyqJm-W1akDpvUe1Q8i7j/view?usp=sharing'">
                     Download CV
                 </button>
-          
             </div>
             <div id="socials-container">
-                <img src="./linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/sudharsan-ds-7667ab267/'" />
-                <img src="./github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Sudharsan2618'" />
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/sudharsan-d-s-7667ab267/'" />
+                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Sudharsan2618'" />
             </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./about-pic.png" alt="Profile picture" class="about-pic" />
+            <div class="text-container">
+                <p>
+                    A developer who likes to make things simple and beautiful. Specialized in web development, Android app development, and customer relationship management. Having strong knowledge in Data Structures and Algorithms.
+                </p>
             </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./experience.png" alt="Experience icon" class="icon" />
-                        <h3>Experience</h3>
-                        <p>1 year Full Stack Development</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./education.png" alt="Education icon" class="icon" />
-                        <h3>Education</h3>
-                        <p>B.Tech. Information Technology</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        A developer who likes to make things simple and beautiful. Specialized in web development, Android app development, and customer relationship management. Having strong knowledge in Data Structures and Algorithms.
-                    </p>
-                </div>
-            </div>
+            
+            
         </div>
         
+            
+        
     </section>
+  
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Full-stack Developer Intern</h2>
-                    <p>ConceptVines </p>
-                    <p>Jan 2024 - Present </p>
-                    <p>Chennai · On-site</p>
+                    <h2 class="experience-sub-title">Gen AI Engineer - ConceptVines | Jan 2024 - Present | Chennai · On-site</h2>
+                    
+                    <ul>
+                        <li>Built an AI-driven mail summarization system using RAG architecture, reducing manpower by 40% and mail reviewing time by 60%.</li>
+                        <li>Hands-on experience with Gen AI finetuning, React, Jenkins, Git, and AWS.</li>
+                        <li>Reduced deployment times by 40% and downtime by 25% through optimized CI/CD.</li>
+                    </ul>
+                    
                 </div>
             </div>
         </div>
-        
     </section>
     <section id="skill">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-          <div class="about-containers">
-              <div class="details-container skill-container">
-                  <h2 class="experience-sub-title">Spring Boot</h2>
-                  <h2 class="experience-sub-title">AWS</h2>
-                  <h2 class="experience-sub-title">React</h2>
-                  <h2 class="experience-sub-title">Git</h2>
-                  <h2 class="experience-sub-title">MySQL</h2>
-                  <h2 class="experience-sub-title">Jenkins</h2>
-                  <h2 class="experience-sub-title">Python</h2>
-                  <h2 class="experience-sub-title">Kogito</h2>
-              </div>
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="skill-container">
+          <div class="skill-item">
+            <h3>Spring Boot</h3>
           </div>
-      </div>
-     
-  </section>
+          <div class="skill-item">
+            <h3>AWS</h3>
+          </div>
+          <div class="skill-item">
+            <h3>React</h3>
+          </div>
+          <div class="skill-item">
+            <h3>Git</h3>
+          </div>
+          <div class="skill-item">
+            <h3>MySQL</h3>
+          </div>
+          <div class="skill-item">
+            <h3>Jenkins</h3>
+          </div>
+          <div class="skill-item">
+            <h3>Python</h3>
+          </div>
+          <div class="skill-item">
+            <h3>Kogito</h3>
+          </div>
+        </div>
+      </section>
   
-  </section>
     <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./project-1.png" alt="Project 1" class="project-img" />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Generative AI</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Sudharsan2618/RAG-implentation-using-mistral-7B-and-chroma-DB'">
-                            Github
-                        </button>
-                    </div>
+        <div class="projects-container">
+            <div class="project-item">
+                <h2 class="project-title">LinkedIn Profile Sniffer</h2>
+                <p class="project-description">Developed an AI-powered web scraper using Python and Selenium to extract LinkedIn profiles, reducing manual data collection time by 50%.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Sudharsan2618/Web_Scaping_using_python" class="btn btn-color-2">GitHub</a>
+                    <a href="#" class="btn btn-color-2">Demo</a>
+                    <a href="#" class="btn btn-color-2">LinkedIn Post</a>
                 </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./project-2.png" alt="Project 2" class="project-img" />
-                    </div>
-                    <h2 class="experience-sub-title project-title">URL scraping in bing and google</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Sudharsan2618/Web_Scaping_using_python'">
-                            Github
-                        </button>
-                    </div>
+            </div>
+            
+            <div class="project-item">
+                <h2 class="project-title">Customized GPT Using RAG</h2>
+                <p class="project-description">Developed a proprietary LLM using RAG, automating data retrieval and lead generation, reducing manual effort by 90%.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Sudharsan2618/RAG-implentation-using-mistral-7B-and-chroma-DB" class="btn btn-color-2">GitHub</a>
+                    <a href="#" class="btn btn-color-2">Demo</a>
+                    <a href="#" class="btn btn-color-2">LinkedIn Post</a>
                 </div>
-                
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="services">
+        <p class="section__text__p1">Discover My</p>
+        <h1 class="title">Services</h1>
+        <div class="services-container">
+            <div class="service-item">
+                <div class="details-container color-container">
+                    <h2>AI Agent Building</h2>
+                    <p>Build custom AI agents that can automate tasks and provide intelligent solutions for your business needs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="details-container color-container">
+                    <h2>Automation Scripting</h2>
+                    <p>Develop automation scripts to streamline repetitive tasks and enhance efficiency in your workflows.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="details-container color-container">
+                    <h2>Automated Web Scraping</h2>
+                    <p>Create robust web scraping solutions to collect data from websites for business intelligence and analysis.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="details-container color-container">
+                    <h2>Technical Content Writing</h2>
+                    <p>Provide high-quality technical writing services, including documentation, blogs, and tutorials.</p>
+                </div>
             </div>
         </div>
-
     </section>
-    <section id="services">
-      <p class="section__text__p1">Discover My</p>
-      <h1 class="title">Services</h1>
-      <div class="services-container">
-          <div class="service">
-              <div class="details-container color-container">
-                  <div class="article-container">
-                      <h2>Website Development</h2>
-                      <p>Specialize in creating modern, responsive websites tailored to your needs.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="service">
-              <div class="details-container color-container">
-                  <div class="article-container">
-                      <h2>Android Application</h2>
-                      <p>Get custom Android applications developed to enhance your business or personal projects.</p>
-                  </div>
-              </div>
-          </div> 
-          <div class="service">
-              <div class="details-container color-container">
-                  <div class="article-container">
-                      <h2>Content Writing</h2>
-                      <p>providing engaging and SEO-friendly content writing services for websites, blogs, and more.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="service">
-              <div class="details-container color-container">
-                  <div class="article-container">
-                      <h2>Marketing</h2>
-                      <p>Boost your brand's visibility and reach with effective digital marketing strategies.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  
+    
+    <section id="blog">
+        <p class="section__text__p1">Read My Latest</p>
+        <h1 class="title">Blog Posts</h1>
+        <div class="blog-container" id="medium-blogs"></div>
+    </section>    
 
-    </section>
+
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
-                <img src="./email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <img src="/sudharsan-portfolio/assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
                 <p><a href="mailto:sudharsan2618@gmail.com">sudharsan2618@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
-                <img src="./linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/sudharsan-ds-7667ab267/">Sudharsan D S</a></p>
+                <img src="/sudharsan-portfolio/assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/sudharsan-d-s-7667ab267/">Sudharsan D S</a></p>
             </div>
             <div class="contact-info-container">
-              <img src="./mobile.png" alt="Mobile icon" class="icon contact-icon" />
+              <img src="/sudharsan-portfolio/assets/mobile.png" alt="Mobile icon" class="icon contact-icon" />
               <p>+91 8220266137</p>
           </div>
         </div>

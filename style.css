@@ -1,19 +1,83 @@
 /* GENERAL */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Oswald", sans-serif;
 }
+
+
+/* SECTIONS */
+
+section {
+  padding-top: 1rem;
+  padding-bottom: rem;
+  margin: 0 5rem;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+  gap: 2rem;
+}
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+/* SKILLS SECTION */
+
+#skill {
+  position: relative;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3 {
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+
+
+
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333;
 }
 
-
-
+.logo, .title {
+  color: #0066cc; /* Darker blue for headings */
+}
 
 html {
   scroll-behavior: smooth;
@@ -39,8 +103,9 @@ nav,
 
 nav {
   justify-content: space-around;
-  align-items: center;
-  height: 17vh;
+  align-items: left;
+  height: 14vh;
+  margin-top: 1rem;
 }
 
 .nav-links {
@@ -56,8 +121,8 @@ a {
 }
 
 a:hover {
-  color: grey;
-  text-decoration: underline;
+  color: #0066cc;
+  
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
 }
@@ -88,7 +153,7 @@ a:hover {
 }
 
 .service {
-  width: calc(50% - 10px); /* Adjust width as needed */
+  width: calc(5% - 10px); /* Adjust width as needed */
   margin-bottom: 20px;
 }
 
@@ -100,15 +165,15 @@ a:hover {
 }
 
 .article-container {
-  text-align: center;
+  text-align: left;
 }
 
 .article-container {
-  text-align: center;
+  text-align: left;
 }
 
 .article-container p {
-  text-align: center; /* Center align the content of <p> tag */
+  text-align: left; /* left align the content of <p> tag */
 }
 
 .skill-container {
@@ -152,7 +217,7 @@ a:hover {
 .menu-links a {
   display: block;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
@@ -195,8 +260,8 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  
+  margin: 0 5rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -205,11 +270,10 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
 
 #profile {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 5rem;
   height: 80vh;
 }
@@ -222,8 +286,8 @@ section {
 }
 
 .section__text {
-  align-self: center;
-  text-align: center;
+  align-self: left;
+  text-align: left;
 }
 
 .section__text p {
@@ -246,9 +310,10 @@ section {
 
 #socials-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin-top: 1rem;
   gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ICONS */
@@ -258,24 +323,65 @@ section {
   height: 2rem;
 }
 
+
+/* Shared styles for buttons */
+.button-style {
+  background-color: #56b3df; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the buttons */
+   
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.button-style:hover {
+  background-color: #56b3df; /* Darker green on hover */
+}
+
+.button-style:active {
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .project-links {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 0.5rem;
+  }
+
+  .project-links a {
+    width: 100%; /* Make buttons full width on mobile */
+    text-align: center;
+  }
+
+  .button-style {
+    width: 100%; /* Make blog buttons full width on mobile */
+    text-align: center;
+  }
+}
+
+
+
+
 /* BUTTONS */
 
 .btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 1rem;
 }
 
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 8rem;
-  border-radius: 2rem;
+  background-color: #0066cc;
+  color: white;
 }
 
 .btn:hover {
-  background-color: #555;
+  background-color: #004080;
 }
 
 .btn-color-1,
@@ -319,11 +425,11 @@ section {
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  
 }
 
 .about-details-container {
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
 }
 
@@ -333,7 +439,7 @@ section {
 }
 
 .about-pic {
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .arrow {
@@ -349,7 +455,7 @@ section {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  text-align: center;
+  text-align: left;
 }
 
 .section-container {
@@ -370,16 +476,58 @@ section {
   
 }
 
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 1rem);
+  margin-bottom: 2rem;
+}
+
+.service-item h2 {
+  color: #0066cc;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Update existing styles for projects and blog posts */
+.project-item, .blog-post {
+  padding: 2rem;
+  width: calc(100% - 1rem);
+  margin-bottom: 2rem;
+}
+
+.project-title, .blog-post h2 {
+  font-size: 1.5rem;
+}
+
+.project-description, .blog-post p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+ 
 }
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
 }
 
@@ -437,14 +585,14 @@ article .icon {
 
 #contact {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
   height: 70vh;
 }
 
 .contact-info-upper-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
@@ -455,8 +603,8 @@ article .icon {
 
 .contact-info-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   gap: 0.5rem;
   margin: 1rem;
 }
@@ -478,10 +626,103 @@ article .icon {
 footer {
   background-color: #050404;
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 1rem;
 }
 
 footer p {
-  text-align: center;
+  text-align: left;
+}
+
+/* Add these new styles */
+
+body {
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333;
+}
+
+.logo, .title {
+  color: #0066cc; /* Darker blue for headings */
+}
+
+.btn {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #004080;
+}
+
+.projects-container, .blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.project-item, .blog-post {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 1rem);
+}
+
+.project-title, .blog-post h2 {
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.project-description, .blog-post p {
+  margin-bottom: 1rem;
+}
+
+
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.project-links a {
+  background-color: #56b3df; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the buttons */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.project-links a:hover {
+  background-color: #56b3df; /* Darker green on hover */
+}
+
+.project-links a:active {
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+@media (max-width: 768px) {
+  .project-links {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    
+  }
+
+  .project-links a {
+    width: 100%; /* Make buttons full width on mobile */
+    text-align: center;
+  }
+}
+
+
+/* Update existing styles */
+.nav-links li a:hover {
+  color: #0066cc;
+}
+
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(90%) saturate(1352%) hue-rotate(201deg) brightness(96%) contrast(106%);
 }

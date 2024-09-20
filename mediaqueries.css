@@ -1,7 +1,7 @@
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
   .about-containers {
     flex-wrap: wrap;
@@ -19,10 +19,6 @@
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
   #profile,
   .section-container {
     display: block;
@@ -30,20 +26,41 @@
   .arrow {
     display: none;
   }
-  section,
-  .section-container {
-    height: fit-content;
-  }
   section {
-    margin: 0 5%;
+    margin: 2rem 5%;
+    height: auto;
   }
   .section__pic-container {
     width: 275px;
     height: 275px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
   }
   .about-containers {
     margin-top: 0;
+  }
+  .projects-container,
+  .blog-container {
+    flex-direction: column;
+  }
+  .project-item,
+  .blog-post {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  #skill .experience-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #skill .experience-sub-title {
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  #experience .experience-details-container {
+    margin-top: 1rem;
   }
 }
 
@@ -99,5 +116,13 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .project-title,
+  .blog-post h2 {
+    font-size: 1.5rem;
+  }
+  .project-description,
+  .blog-post p {
+    font-size: 1rem;
   }
 }
