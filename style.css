@@ -27,38 +27,51 @@ section {
   position: relative;
 }
 
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 .experience-details-container {
+  padding: 20px;
   display: flex;
   justify-content: left;
   flex-direction: row;
 }
 
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 250px; /* Spacing between columns */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 15px; /* Space below the grid */
+}
 /* SKILLS SECTION */
 
 #skill {
   position: relative;
 }
 
+
 .skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* Display two columns */
+  gap: 5px; /* Gap between items */
 }
 
 .skill-item {
+  position: relative;
   background-color: white;
   border-radius: 8px;
+  transition: background 0.3s;
+  cursor: pointer;
   padding: 1rem;
+  width: 325px;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item:hover {
+  background-color: #e0e0e0;
 }
 
 .skill-item h3 {
@@ -66,6 +79,38 @@ section {
   margin-bottom: 0.5rem;
 }
 
+
+/* Popup styling */
+.popup {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the skill item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.skill-item:hover .popup {
+  display: block;
+}
+
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
 
 
 
@@ -77,6 +122,7 @@ body {
 
 .logo, .title {
   color: #0066cc; /* Darker blue for headings */
+  margin-bottom: 10px;
 }
 
 html {
@@ -147,9 +193,16 @@ a:hover {
 }
 
 .services-container {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display two columns */
+  gap: 5px; /* Gap between items */
 }
 
 .service {
@@ -157,12 +210,7 @@ a:hover {
   margin-bottom: 20px;
 }
 
-.details-container {
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
+
 
 .article-container {
   text-align: left;
@@ -178,7 +226,7 @@ a:hover {
 
 .skill-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Display two columns */
+  grid-template-columns: repeat(3, 1fr); /* Display two columns */
   gap: 5px; /* Gap between items */
 }
 
@@ -246,15 +294,11 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
-}
-
-.hamburger-icon span:first-child {
   opacity: 1;
-}
-
-.hamburger-icon span:first-child {
   transform: none;
 }
+
+
 
 /* SECTIONS */
 
@@ -450,7 +494,7 @@ section {
 
 .details-container {
   padding: 1.5rem;
-  flex: 1;
+  flex: 3;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -479,6 +523,8 @@ section {
 .services-container {
   display: flex;
   flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr); /* Display two columns */
+  gap: 5px; /* Gap between items */
   justify-content: space-between;
 }
 
@@ -521,8 +567,7 @@ section {
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
-  font-size: 1.75rem;
- 
+  font-size: 1.5rem;
 }
 
 .experience-details-container {
@@ -572,7 +617,7 @@ article .icon {
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 0rem;
   color: black;
 }
 
@@ -623,15 +668,11 @@ article .icon {
 
 /* FOOTER SECTION */
 
-footer {
-  background-color: #050404;
-  color: #fff;
-  text-align: left;
-  padding: 1rem;
-}
 
 footer p {
-  text-align: left;
+  text-align: center;
+  background-color: #050404;
+  color:#ffffff;
 }
 
 /* Add these new styles */
@@ -725,4 +766,199 @@ body {
 
 .icon:hover {
   filter: brightness(0) saturate(100%) invert(23%) sepia(90%) saturate(1352%) hue-rotate(201deg) brightness(96%) contrast(106%);
+}
+
+
+
+/* Chatbot Icon */
+#chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#chatbot-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Chatbot Popup */
+#chatbot-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 380px;
+  max-height: 550px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-content {
+  display: flex;
+  flex-direction: column;
+  height: 280px; /* Set a fixed height to control layout */
+  max-height: 80vh; /* Responsive height for smaller screens */
+  overflow-y: hidden; /* Prevent overall scrolling */
+}
+
+.chatbot-content p {
+  margin: 0;
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chatbot-content h2 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#upload-form, #query-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+#file-upload, #question {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#upload-form button, #query-form button {
+  padding: 8px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#upload-form button:hover, #query-form button:hover {
+  background-color: #0056b3;
+}
+
+#response {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Input Bar at the Bottom */
+.input-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  width: 96%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 5px;  
+}
+
+#file-upload-button, #send-query {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#file-upload-button {
+    color: #007bff;
+}
+
+#question {
+    flex-grow: 1;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#response-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  
+}
+
+.response-message {
+  margin: 5px 0;
+  margin-right: 40px;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+
+}
+
+/* Styling for user question messages */
+.question-message {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  align-self: flex-end; /* Align question messages to the right */
+  border-radius: 8px;
+  margin: 5px 0;
+  margin-left: 40px;
+  padding: 8px;
+}
+
+#loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensure it overlays other content inside chatbot-popup */
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
