@@ -21,7 +21,7 @@ function toggleChatbot() {
 
 //   //http://127.0.0.1:5001/
 //   try {
-//       const response = await fetch("http://13.200.243.155:5002/upload", {
+//       const response = await fetch("http://127.0.0.1:5002/upload", {
 //           method: "POST",
 //           body: formData
 //       });
@@ -70,7 +70,7 @@ document.getElementById("file-upload").addEventListener("change", async function
   showLoading(); // Show loading indicator before starting the request
 
   try {
-      const response = await fetch("http://13.200.243.155:5002/upload", {
+      const response = await fetch("http://127.0.0.1:5002/upload", {
           method: "POST",
           body: formData
       });
@@ -116,7 +116,7 @@ document.getElementById("file-upload").addEventListener("change", async function
 
 //   try {
 //       // Send the question to the server
-//       const response = await fetch("http://13.200.243.155:5002/query", {
+//       const response = await fetch("http://127.0.0.1:5002/query", {
 //           method: "POST",
 //           headers: { "Content-Type": "application/json" },
 //           body: JSON.stringify({ question: questionText, file_key })
@@ -157,7 +157,7 @@ document.getElementById("send-query").addEventListener("click", async function (
   showLoading(); // Show loading indicator before starting the request
 
   try {
-      const response = await fetch("http://13.200.243.155:5002/query", {
+      const response = await fetch("http://127.0.0.1:5002/query", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question: questionText, file_key })
