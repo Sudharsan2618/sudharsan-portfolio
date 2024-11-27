@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Resume Feedback</title>
+    <link rel="stylesheet" href="demo-scrapper-styles.css" />
+
+</head>
+<body>
+
+        <!-- Project Description Section -->
+        <div class="description-section">
+            <h1>About the Resume Feedback Tool</h1>
+            <p>
+                This project is designed to help job seekers enhance their resumes and tailor them to specific job descriptions.
+                By leveraging AI, the tool provides targeted feedback and suggestions based on the uploaded resume and job description provided by the user.
+            </p>
+            <p>
+                <strong>How does it work?</strong>
+                The tool analyzes your resume and matches it against the job description you provide. It then generates personalized suggestions to help you
+                align your resume with the job requirements, increasing your chances of getting shortlisted for interviews.
+            </p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Upload your resume in PDF or DOCX format.</li>
+                <li>Paste the job description for the role you're applying to.</li>
+                <li>Receive detailed feedback and suggestions to improve your resume.</li>
+            </ul>
+            <p>
+                Use this tool to stand out in the competitive job market by ensuring your resume highlights the skills and experiences that employers are looking for.
+            </p>
+        </div>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="header">Resume Feedback</div>
+            <div class="input-container">
+                <label for="resume">Upload Resume:</label>
+                <button id="file-upload-button" onclick="document.getElementById('file-upload').click()">📁 Upload File</button>
+                <input type="file" id="file-upload" name="file" />
+                <label for="job-description">Job Description:</label>
+                <textarea id="job-description" placeholder="Paste the job description here..."></textarea>
+            </div>
+            <div class="btn-container">
+                <button id="generate-feedback" class="btn">Generate Feedback</button>
+            </div>
+        </div>
+
+        <!-- Response Section -->
+        <div class="response-section">
+            <div class="header">Suggestions</div>
+            <textarea id="response-display" class="response-display" readonly>No suggestions available.
+            </textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="demo-scrapper-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f9f9f9;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            min-height: 100vh; /* Ensures body takes up full height */
+            margin: 0; /* Removes default body margin */
+            padding: 20px; /* Optional padding for breathing room */
+        }
+        
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+            
+            overflow: hidden;
+        }
+
+        .form-section,
+        .response-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-section {
+            border-right: 1px solid #ccc;
+        }
+
+        .header {
+            background-color: #0078ff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .input-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-container label {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        #file-upload-button {
+            background-color: #0078ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #file-upload-button:hover {
+            background-color: #005bb5;
+        }
+
+        #file-upload {
+            display: none;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            min-height: 100px; /* Increased height */
+            height: 100px; /* Set a specific height */
+            background-color: #f9f9f9;
+            overflow-y: auto; 
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #0078ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        .response-section {
+            background-color: #f9f9f9;
+        }
+
+        .response-placeholder {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px dashed #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            height: calc(100% - 40px);
+            overflow-y: auto;
+            font-size: 1rem;
+        }
+
+        .response-placeholder ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .response-placeholder li {
+            background-color: #f1f1f1;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .form-section {
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .response-section {
+                height: auto;
+            }
+        }
+
+        .job-description {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            min-height: 200px; /* Increased height */
+            height: 300px; /* Set a specific height */
+            background-color: #f9f9f9;
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds the height */
+        }
+       
+        .response-display {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            min-height: 200px; /* Increased height */
+            height: 300px; /* Set a specific height */
+            background-color: #f9f9f9;
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds the height */
+        }
+
+        .response-display {
+            background-color: #f9f9f9;
+            overflow-y: auto;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #0078ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .form-section {
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+
+
+              /* Style for the project description */
+              .description-section {
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                font-family: "Poppins", sans-serif;
+                color: #333;
+                line-height: 1.6;
+            }
+    
+            .description-section h1 {
+                font-size: 1.8rem;
+                color: #0078ff;
+                margin-bottom: 10px;
+            }
+    
+            .description-section p {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+    
+            .description-section ul {
+                margin-top: 10px;
+                list-style: disc;
+                padding-left: 20px;
+            }
+    
+            .description-section ul li {
+                margin-bottom: 8px;
+            }

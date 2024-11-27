@@ -172,6 +172,24 @@
             </div>
             
             <div class="project-item">
+                <h2 class="project-title">AI-Powered Resume Feedback and Optimization Tool</h2>
+                <p class="project-description">
+                   <ul> Built an AI-driven web application to help job seekers enhance their resumes and tailor them to specific job descriptions. 
+                    The tool allows users to upload their resumes in PDF or DOCX formats and paste the job description of their target role. 
+                    Using advanced natural language processing techniques, the application analyzes the resume and job description to generate 
+                    actionable feedback and personalized suggestions for improvement. 
+                   </ul>  <b>Key features include:</b>
+                    This tool significantly reduces the manual effort required to customize resumes, enabling job seekers to focus on applying for roles with confidence. 
+                    By improving the alignment between resumes and job descriptions, the tool enhances the likelihood of securing interviews.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/YourGitHubProfile/Resume_Feedback_Tool" class="btn btn-color-2">GitHub</a>
+                    <a href="feedback-demo.html" class="btn btn-color-2">Demo</a>
+                    <a href="#" class="btn btn-color-2">LinkedIn Post</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
                 <h2 class="project-title">Customized GPT with Retrieval-Augmented Generation (RAG)</h2>
                 <p class="project-description">Developed an advanced chatbot leveraging Python, Boto3, Hugging Face, Mistral, VectorDB, and Embeddings for automated document-based Q&A. 
                     The system accepts file inputs, stores them securely in AWS S3, and extracts text, converting it into embeddings. 
@@ -180,8 +198,8 @@
                     This solution drastically reduces manual lookup time by 90%, streamlining data extraction and enhancing lead generation workflows.</p>
                 <div class="project-links">
                     <a href="https://github.com/Sudharsan2618/RAG-implentation-using-mistral-7B-and-chroma-DB" class="btn btn-color-2">GitHub</a>
-                    <a href="#" class="btn btn-color-2">Demo</a>
-                    <a href="#" class="btn btn-color-2">LinkedIn Post</a>
+                    <a class="btn btn-color-2" onclick="toggleChatbot()">Demo</a>
+                    <a class="btn btn-color-2">LinkedIn Post</a>
                 </div>
             </div>
             
@@ -254,8 +272,7 @@
               <p>+91 8220266137</p>
           </div>
         </div>
-    </section>
-    
+    </section>   
     <!-- Chatbot Icon and Popup -->
         <div id="chatbot-icon" onclick="toggleChatbot()">
             <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Chatbot Icon" />
@@ -267,10 +284,8 @@
             </div>
             <div class="chatbot-content">
                 <!-- Responses display here -->
-                <div id="response-container"></div>
-                
+                <div id="response-container"></div>               
                 <!-- Input bar at the bottom -->
-
             </div>
             <div class="input-bar">
                 <input type="file" id="file-upload" name="file" style="display: none;" />
@@ -283,10 +298,7 @@
                 <div class="spinner"></div>
             </div>
         </div>
-       
         <div id="overlay"></div>
-
-
     <footer>
         <p>Copyright &#169; 2024 Sudharsan D S. All Rights Reserved.</p>
     </footer>
