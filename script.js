@@ -56,7 +56,7 @@ document.getElementById("file-upload").addEventListener("change", async function
   showLoading(); // Show loading indicator before starting the request
 
   try {
-      const response = await fetch("http://127.0.0.1:5002/upload", {
+      const response = await fetch("https://chatbot-backend-wvi9.onrender.com/upload", {
           method: "POST",
           body: formData
       });
@@ -97,7 +97,7 @@ document.getElementById("send-query").addEventListener("click", async function (
   showLoading(); // Show loading indicator before starting the request
 
   try {
-      const response = await fetch("http://127.0.0.1:5002/query", {
+      const response = await fetch("https://chatbot-backend-wvi9.onrender.com/query", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question: questionText, file_key })
