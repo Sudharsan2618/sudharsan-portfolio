@@ -13,30 +13,16 @@ function toggleChatbot() {
   chatbotPopup.style.display = chatbotPopup.style.display === "none" || !chatbotPopup.style.display ? "block" : "none";
 }
 
-// Handle file upload and store file_key
-// document.getElementById("file-upload").addEventListener("change", async function () {
-//   let fileInput = document.getElementById("file-upload").files[0];
-//   let formData = new FormData();
-//   formData.append("file", fileInput);
+function showMsgPopup() {
+  document.getElementById('popup-message').style.display = 'block';
+  document.body.style.overflow = 'hidden'; // Disable scrolling
+}
 
-//   //http://127.0.0.1:5001/
-//   try {
-//       const response = await fetch("http://127.0.0.1:5002/upload", {
-//           method: "POST",
-//           body: formData
-//       });
+function closeMsgPopup() {
+  document.getElementById('popup-message').style.display = 'none';
+  document.body.style.overflow = ''; // Restore scrolling
+}
 
-//       if (response.ok) {
-//           const data = await response.json();
-//           localStorage.setItem("file_key", data.file_key);
-//           console.log("File uploaded successfully:", data.file_key); // Console log the file key
-//       } else {
-//           console.error("Failed to upload file:", await response.text());
-//       }
-//   } catch (error) {
-//       console.error("Error uploading file:", error);
-//   }
-// });
 
 // Show the popup for the selected skill item
 function showPopup(popupId) {
@@ -89,52 +75,6 @@ document.getElementById("file-upload").addEventListener("change", async function
   }
 });
 
-
-
-// Function to handle sending a question and receiving a response
-// document.getElementById("send-query").addEventListener("click", async function () {
-//   const questionInput = document.getElementById("question");
-//   const questionText = questionInput.value.trim();
-
-//   if (!questionText) {
-//       alert("Please enter a question.");
-//       return;
-//   }
-
-//   // Display the question in the chat interface
-//   displayMessage(questionText, "question-message");
-
-//   // Clear the input field
-//   questionInput.value = '';
-
-//   // Retrieve file_key from localStorage
-//   let file_key = localStorage.getItem("file_key");
-//   if (!file_key) {
-//       alert("Please upload a document first.");
-//       return;
-//   }
-
-//   try {
-//       // Send the question to the server
-//       const response = await fetch("http://127.0.0.1:5002/query", {
-//           method: "POST",
-//           headers: { "Content-Type": "application/json" },
-//           body: JSON.stringify({ question: questionText, file_key })
-//       });
-
-//       if (response.ok) {
-//           const data = await response.json();
-//           const resultMessage = data.result || "No response from server.";
-//           displayMessage(resultMessage, "response-message"); // Display server response
-//       } else {
-//           console.error("Failed to process query:", await response.text());
-//           displayMessage("Error: Could not get a response.", "response-message");
-//       }
-//   } catch (error) {
-//       console.error("Error processing query:", error);
-//       displayMessage("Error: Could not reach the server.", "response-message");
-//   }
-// });
 
 document.getElementById("send-query").addEventListener("click", async function () {
   const questionInput = document.getElementById("question");

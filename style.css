@@ -96,6 +96,8 @@ section {
   z-index: 10;
 }
 
+
+
 .skill-item:hover .popup {
   display: block;
 }
@@ -178,7 +180,8 @@ a:hover {
 }
 
 .logo:hover {
-  cursor: default;
+  cursor: pointer;
+  text-underline-position: below;
 }
 
 /* HAMBURGER MENU */

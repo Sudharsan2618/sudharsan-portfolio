@@ -10,7 +10,8 @@
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Learn AI🤖</div>
+        <div class="logo" onclick="showMsgPopup()">Learn AI🤖</div>
+        <!-- <a href="#" onclick="showMsgPopup()">Learn AI🤖</a> -->
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -23,6 +24,15 @@
             </ul>
         </div>
     </nav>
+        <!-- Popup message container -->
+        <div id="popup-message" style="display: none; position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%);     background-color: #f0f8ff; color: #333; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+            <p>
+                🌟 Welcome to the future of AI learning! 🌟 <br><br>
+                This platform is designed to empower you with cutting-edge AI skills, and we're hard at work crafting an incredible experience just for you. 🚀 Currently, it's a work in progress, but get ready to dive into Version One soon! <br><br>
+                Stay tuned, because an AI revolution is on the horizon. 📈✨
+            </p>
+        <button onclick="closeMsgPopup()" style="margin-top: 10px; padding: 5px 10px; background-color: #555; color: #fff; border: none; cursor: pointer; border-radius: 4px;">Close</button>
+        </div>
     <nav id="hamburger-nav">
         <div class="logo">Sudharsan D S</div>
         <div class="hamburger-menu">
