@@ -1,0 +1,143 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header Section */
+.header-section {
+    padding: 30px 20px;
+    color: rgb(8, 8, 8);
+}
+
+.brand-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.brand-subtitle {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Form Section */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+/* Validation error styling */
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 1px solid #ccc;
+}
+
+/* Red border styling for invalid fields */
+input[style*="red"] {
+    border: 2px solid red !important;
+}
+
+
+
+.form-section h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+.at-symbol {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+input:focus {
+    border-color: #007bb5;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 181, 0.3);
+}
+
+/* Button */
+.btn-primary {
+    background-color: #f24c3d;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d93c2e;
+}
+
+/* Info Note */
+.info-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Response Section */
+.response-section textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    background-color: #f4f4f4;
+    height: 50px;
+    color: #333;
+}
+
+.response-section textarea:focus {
+    outline: none;
+    border-color: #007bb5;
+    box-shadow: 0 0 4px rgba(0, 123, 181, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .at-symbol {
+        display: none;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Finder Tool</title>
+    <link rel="stylesheet" href="email-finder-styles.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <h1>About the Email Finder Tool</h1>
+            <p>
+                This tool is designed to help you discover potential bussiness email addresses based on the input details of an individual.
+                Leveraging advanced validation techniques, the tool ensures that the bussiness email address is valid and functional.
+            </p>
+            <p>
+                <strong>How does it work?</strong>
+                By providing a first name, last name, and company domain, the tool generates multiple email patterns and validates each one to find the correct email address.
+            </p>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <div class="container form-section">
+        <h2>Enter Your Contact's Information Below:</h2>
+        <form id="email-finder-form">
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="first-name"
+                    placeholder="First Name"
+                    required
+                    oninput="validateNameInput(this)"
+                />
+                <input
+                    type="text"
+                    id="last-name"
+                    placeholder="Last Name"
+                    required
+                    oninput="validateNameInput(this)"
+                />
+                <span class="at-symbol">@</span>
+                <input
+                    type="text"
+                    id="company-domain"
+                    placeholder="Company Domine (e.g., xyz.com)"
+                    required
+                    oninput="validateDomainInput(this)"
+                />
+            </div>
+            <button type="button" id="find-email" class="btn-primary">
+                FIND EMAIL
+            </button>
+            <div class="container response-section">
+                <textarea id="response-display" readonly>No results yet.</textarea>
+            </div>
+        </form>
+    </div>
+    <!-- Results Section -->
+
+
+    <!-- Load the script AFTER the HTML -->
+    <script src="email-finder-script.js"></script>
+</body>
+</html>
