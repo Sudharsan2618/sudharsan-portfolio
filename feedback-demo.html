@@ -39,7 +39,8 @@
             <div class="input-container">
                 <label for="resume">Upload Resume:</label>
                 <button id="file-upload-button" onclick="document.getElementById('file-upload').click()">📁 Upload File</button>
-                <input type="file" id="file-upload" name="file" />
+                <input type="file" id="file-upload" name="file" style="display: none;" />
+                <div id="upload-status" style="margin-top: 10px; color: green; display: none;"></div>
                 <label for="job-description">Job Description:</label>
                 <textarea id="job-description" placeholder="Paste the job description here..."></textarea>
             </div>

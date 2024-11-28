@@ -59,6 +59,7 @@ document.getElementById("file-upload").addEventListener("change", async function
     let formData = new FormData();
     formData.append("file", fileInput);
 
+    const uploadStatus = document.getElementById("upload-status");
     showLoading(); // Show loading indicator before starting the request
 
     try {
@@ -71,15 +72,31 @@ document.getElementById("file-upload").addEventListener("change", async function
             const data = await response.json();
             localStorage.setItem("file_key", data.file_key);
             console.log("File uploaded successfully:", data.file_key);
+
+            // Display success message
+            uploadStatus.style.display = "block";
+            uploadStatus.style.color = "green";
+            uploadStatus.textContent = "File uploaded successfully!";
         } else {
             console.error("Failed to upload file:", await response.text());
+
+            // Display error message
+            uploadStatus.style.display = "block";
+            uploadStatus.style.color = "red";
+            uploadStatus.textContent = "Failed to upload file.";
         }
     } catch (error) {
         console.error("Error uploading file:", error);
+
+        // Display error message
+        uploadStatus.style.display = "block";
+        uploadStatus.style.color = "red";
+        uploadStatus.textContent = "An error occurred while uploading.";
     } finally {
         hideLoading(); // Hide loading indicator after the request completes
     }
 });
+
 
 // Mock loading indicators
 function showLoading() {
